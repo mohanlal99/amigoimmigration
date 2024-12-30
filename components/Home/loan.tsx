@@ -125,7 +125,7 @@ const Loan = () => {
             </p>
           </div>
           <Button className="px-8" size="lg">
-            <Link href="/services/loans">Get Started</Link>
+            <Link href="/services/loan-services">Get Started</Link>
           </Button>
         </motion.div>
       </div>
