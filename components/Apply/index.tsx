@@ -76,7 +76,7 @@ const Apply = () => {
 
       formData.append("cv", file);
 
-      const response = await fetch("/api/upload/cv", {
+      const response = await fetch(`/api/upload/cv`, {
         method: "POST",
         body: formData,
       });
@@ -100,7 +100,7 @@ const Apply = () => {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch(`/api/submit-application`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/submit-application`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
