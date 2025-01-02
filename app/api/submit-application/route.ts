@@ -10,24 +10,24 @@ import Application from "@/models/application";
 
 export async function POST(req: NextRequest) {
   try {
-    await ConnectDB();
+    // await ConnectDB();
 
     const requestBody = await req.json();
 
     const { name, email } = requestBody;
 
-    const existingApplication = await Application.findOne({ email });
+    // const existingApplication = await Application.findOne({ email });
 
-    if (existingApplication) {
-      return NextResponse.json(
-        { message: "Application already submitted with this email" },
-        { status: 400 },
-      );
-    }
+    // if (existingApplication) {
+    //   return NextResponse.json(
+    //     { message: "Application already submitted with this email" },
+    //     { status: 400 },
+    //   );
+    // }
 
-    const newApplication = new Application(requestBody);
+    // const newApplication = new Application(requestBody);
 
-    await newApplication.save();
+    // await newApplication.save();
 
     const transporter = createTransporter();
 
@@ -54,9 +54,8 @@ export async function POST(req: NextRequest) {
       {
         message: "Application submitted successfully! Emails have been sent.",
         data: {
-          name: newApplication.name,
-          email: newApplication.email,
-          department: newApplication.department,
+          name: name,
+          email: email,
         },
       },
       { status: 201 },
