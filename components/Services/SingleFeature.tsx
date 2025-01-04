@@ -35,15 +35,15 @@ export const SingleServicesCard: React.FC<{ service: Service }> = ({
       transition={{ type: "spring", stiffness: 300 }}
       whileHover={{ scale: 1.03 }}
     >
-      <Card radius="none" isHoverable className="overflow-hidden h-full p-2">
+      <Card isHoverable className="overflow-hidden h-full p-2" radius="none">
         <CardBody className="p-0">
           <div className="relative">
             <Image
               removeWrapper
               alt={service.title}
               className="w-full h-60 object-cover  transition-transform duration-300 ease-in-out"
-              src={service.image}
               radius="none"
+              src={service.image}
               style={{ transform: isHovered ? "scale(1.1)" : "scale(1)" }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

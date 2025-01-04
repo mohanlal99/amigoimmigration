@@ -1,14 +1,14 @@
 "use client";
 
-import { siteConfig } from "@/config/site";
-import { Input } from "@nextui-org/input";
 import { Button, Link } from "@nextui-org/react";
-import { Github, Linkedin, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import { Linkedin, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import { useRouter } from "next/navigation";
+
+import { siteConfig } from "@/config/site";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const router = useRouter()
+  const router = useRouter();
   const socialLinks = [
     {
       name: "Facebook",
@@ -35,7 +35,7 @@ const Footer = () => {
       icon: <Linkedin className="h-5 w-5" />,
       link: siteConfig.links.linkedin,
     },
-  ]
+  ];
 
   const servicesLinks = [
     { name: "Job Seekers", href: "/services/job-seekers" },
@@ -79,8 +79,8 @@ const Footer = () => {
               {servicesLinks.map((link) => (
                 <Link
                   key={link.name}
-                  href={link.href}
                   className="text-blue-200 hover:text-blue-600 transition-colors"
+                  href={link.href}
                 >
                   {link.name}
                 </Link>
@@ -99,8 +99,8 @@ const Footer = () => {
               {legalLinks.map((link) => (
                 <Link
                   key={link.name}
-                  href={link.href}
                   className="text-blue-200 hover:text-blue-600 transition-colors"
+                  href={link.href}
                 >
                   {link.name}
                 </Link>
@@ -111,23 +111,21 @@ const Footer = () => {
 
         {/* Social Media & Subscribe */}
         <div className="mt-8 flex flex-col items-center gap-6">
-        <div className="flex justify-start md:justify-end space-x-4">
-              {socialLinks.map((social, index) => (
-                <Button
-                  key={index}
-                  isIconOnly
-                  aria-label={social.name}
-                  className="text-white"
-                  size="sm"
-                  variant="ghost"
-                  onClick={() => router.push(social.link)}
-                >
-                  {social.icon}
-                </Button>
-              ))}
-            </div>
-
-         
+          <div className="flex justify-start md:justify-end space-x-4">
+            {socialLinks.map((social, index) => (
+              <Button
+                key={index}
+                isIconOnly
+                aria-label={social.name}
+                className="text-white"
+                size="sm"
+                variant="ghost"
+                onClick={() => router.push(social.link)}
+              >
+                {social.icon}
+              </Button>
+            ))}
+          </div>
         </div>
 
         {/* Copyright */}

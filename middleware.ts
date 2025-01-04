@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const allowedOrigins = [
   "https://amigoimmigrant.com",
-  "https://www.amigoimmigrant.com"
+  "https://www.amigoimmigrant.com",
 ];
 
 export function middleware(request: NextRequest) {
@@ -14,8 +14,14 @@ export function middleware(request: NextRequest) {
 
     if (allowedOrigins.includes(origin || "")) {
       response.headers.set("Access-Control-Allow-Origin", origin || "");
-      response.headers.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
-      response.headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
+      response.headers.set(
+        "Access-Control-Allow-Methods",
+        "GET, POST, OPTIONS, PUT, DELETE",
+      );
+      response.headers.set(
+        "Access-Control-Allow-Headers",
+        "Content-Type, Authorization",
+      );
       response.headers.set("Access-Control-Allow-Credentials", "true");
       response.headers.set("Vary", "Origin");
     }
@@ -28,8 +34,14 @@ export function middleware(request: NextRequest) {
 
   if (allowedOrigins.includes(origin || "")) {
     response.headers.set("Access-Control-Allow-Origin", origin || "");
-    response.headers.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
-    response.headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    response.headers.set(
+      "Access-Control-Allow-Methods",
+      "GET, POST, OPTIONS, PUT, DELETE",
+    );
+    response.headers.set(
+      "Access-Control-Allow-Headers",
+      "Content-Type, Authorization",
+    );
     response.headers.set("Access-Control-Allow-Credentials", "true");
     response.headers.set("Vary", "Origin");
   }

@@ -12,26 +12,27 @@ const menuData: Menu[] = [
     title: "About Us", // This corresponds to the navItems about section
     path: "/about",
     newTab: false,
+    submenu: [
+      { id: 51, title: "Who We Are", path: "/about/who-we-are", newTab: false },
+      {
+        id: 52,
+        title: "Career Consultant",
+        path: "/about/career-consultant",
+        newTab: false,
+      },
+      {
+        id: 54,
+        title: "Our Specialization",
+        path: "/about/specialization",
+        newTab: false,
+      },
+    ],
   },
   {
     id: 6,
     title: "Our Services",
     path: "/services",
     newTab: false,
-    submenu: [
-      {
-        id: 62,
-        title: "Services to Job Seekers",
-        path: "/services/job-seekers",
-        newTab: false,
-      },
-      {
-        id: 63,
-        title: "Services to Employers",
-        path: "/services/employers",
-        newTab: false,
-      },
-    ],
   },
   {
     id: 7,

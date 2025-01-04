@@ -5,8 +5,6 @@ import {
   welcomeEmailTemplate,
 } from "@/components/Submit/emailTemplates";
 import { createTransporter } from "@/components/Submit/mailer";
-import { ConnectDB } from "@/lib/db";
-import Application from "@/models/application";
 
 export async function POST(req: NextRequest) {
   try {

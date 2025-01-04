@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Card } from "@nextui-org/card";
 import {
   GraduationCap,
   BookOpen,
@@ -30,27 +29,32 @@ const StudyAbroadPrograms = () => {
     },
     {
       title: "Diploma in Food Production",
-      description: "A short-term course specializing in culinary arts and kitchen management.",
+      description:
+        "A short-term course specializing in culinary arts and kitchen management.",
       icon: BookOpen,
     },
     {
       title: "Diploma in Front Office",
-      description: "Focuses on front desk operations, customer interactions, and hospitality skills.",
+      description:
+        "Focuses on front desk operations, customer interactions, and hospitality skills.",
       icon: Briefcase,
     },
     {
       title: "Diploma in Housekeeping",
-      description: "Learn to maintain cleanliness and provide world-class guest experiences.",
+      description:
+        "Learn to maintain cleanliness and provide world-class guest experiences.",
       icon: Award,
     },
     {
       title: "Master's in Hotel Management",
-      description: "Advanced degree for leadership roles in global hospitality chains.",
+      description:
+        "Advanced degree for leadership roles in global hospitality chains.",
       icon: Globe,
     },
     {
       title: "Master's in Food & Beverage Management",
-      description: "Specialized program focusing on managing restaurants and catering services.",
+      description:
+        "Specialized program focusing on managing restaurants and catering services.",
       icon: CheckCircle,
     },
   ];

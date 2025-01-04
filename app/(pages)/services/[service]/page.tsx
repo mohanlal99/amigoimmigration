@@ -1,12 +1,13 @@
 import { notFound } from "next/navigation";
 import { FC } from "react";
 
+import Diplomas from "../../../../components/Services/our-programs";
+
 import EmployerServices from "@/components/Services/Employers";
 import JobSeekers from "@/components/Services/Job-seekers";
 import LoanServices from "@/components/Services/programs/LoanServices";
 import Placement from "@/components/Services/programs/Placement";
 import PremiumServices from "@/components/Services/programs/premium-services";
-import Diplomas from "../../../../components/Services/our-programs";
 
 interface ServiceProps {
   params: Promise<{

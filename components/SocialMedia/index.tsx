@@ -2,12 +2,7 @@
 
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import {
-  Facebook,
-  Instagram,
-  Phone,
-  Twitter
-} from "lucide-react";
+import { Facebook, Instagram, Phone, Twitter } from "lucide-react";
 
 import { siteConfig } from "@/config/site";
 
