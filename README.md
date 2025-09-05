@@ -1,53 +1,113 @@
-# Next.js & NextUI Template
+# Amigo Immigration Services 🌍
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+Amigo Immigration Services is a professional consultancy platform designed to guide individuals seeking global opportunities in hospitality, internships, and study abroad programs.  
+This project is a **Next.js 14 application** built with modern tools like **NextUI**, **Framer Motion**, and **React**, ensuring smooth animations, responsiveness, and a premium user experience.  
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+The platform showcases company offerings, provides details about study and job opportunities abroad, and allows applicants to apply online with data sent securely to email.
 
-## Technologies Used
+---
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+## 🌐 Live Website
+[Visit Amigo Immigration Services](https://www.amigoimmigrant.com/)  
 
-## How to Use
+---
 
-### Use the template with create-next-app
+## ✨ Features
 
-To create a new project based on this template using `create-next-app`, run the following command:
+- 🏢 **Company Showcase** – About Us, Services, Internships, Study Abroad, and Contact.
+- 📄 **Online Application Forms** – Users can apply for jobs, internships, or study abroad programs directly.
+- 📧 **Form Data to Email** – Applications are processed and sent directly to company email.
+- 🌍 **Global Opportunities** – Job placements in luxury hotels, cruise ships, and international industries.
+- 🎨 **Modern UI/UX** – Built using NextUI, Tailwind CSS, and Framer Motion animations.
+- 📱 **Responsive Design** – Fully responsive across devices.
 
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework**: [Next.js 14](https://nextjs.org/)  
+- **UI Components**: [NextUI](https://nextui.org/), Tailwind CSS  
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)  
+- **Backend Handling**: Next.js API Routes  
+- **Deployment**: Vercel  
+
+---
+
+## 📂 Project Folder Structure
+
+```hash
+app/
+┣ (pages)/
+┃ ┣ about/
+┃ ┣ blog/
+┃ ┣ contact/
+┃ ┣ internship/
+┃ ┣ services/
+┃ ┣ study-abroad/
+┃ ┣ privacy-policy/
+┃ ┣ terms-conditions/
+┃ ┣ layout.tsx
+┃ ┗ page.tsx
+┣ api/
+┃ ┗ email.ts
+┣ components/
+┃ ┣ About/
+┃ ┣ Apply/
+┃ ┣ Header/
+┃ ┣ Home/
+┃ ┣ Immigration/
+┃ ┣ Internship/
+┃ ┣ Services/
+┃ ┣ Programs/
+┃ ┣ SocialMedia/
+┃ ┗ UI Components...
+┣ public/
+┣ styles/
+┣ package.json
+┗ next.config.js
+
+
 ```
+---
 
-### Install dependencies
+## 📌 Homepage Sections
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+- **Hero Section** – Global Opportunities Await  
+- **About Us** – Company profile and mission  
+- **Our Services** – Job seekers, Employers, Study Abroad, Career guidance  
+- **Internship Programs** – International internships in hospitality  
+- **Study Abroad Loans** – Financial support for global education  
+- **Visa Categories** – PR, Work, Study, Business visas across countries  
+- **Application Form** – Secure online application system  
+- **FAQs** – Common questions about placements & services  
 
-```bash
-npm install
-```
+---
 
-### Run the development server
+## 📸 Screenshots
 
-```bash
-npm run dev
-```
+| Homepage | About Us |
+|----------|----------|
+| ![Homepage](https://i.postimg.cc/sDxqCMr5/image.png) | ![About Us](https://i.postimg.cc/QtSMGtTK/image.png) |
 
-### Setup pnpm (optional)
+| Services | Internship |
+|----------|------------|
+| ![Services](https://i.postimg.cc/fb3971J0/image.png) | ![Internship](https://i.postimg.cc/7Z2Z9zgm/image.png) |
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+| Apply Form | Contact Us |
+|------------|------------|
+| ![Apply Form](https://i.postimg.cc/jdC9J0Nr/image.png) | ![Contact Us](https://i.postimg.cc/7Y2LMc8p/image.png) |
 
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
+---
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+## 📖 Project Overview
 
-## License
+Amigo Immigration Services' website is more than just an online presence — it’s a **complete business solution**.  
+It highlights company expertise, creates trust with potential clients, and streamlines the **application process** by collecting user data directly through the platform.  
+With a modern design, smooth animations, and professional branding, this project successfully represents the consultancy’s global vision.  
 
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+---
+
+## ©️ Copyright & Credits
+
+© 2025 Amigo Immigration Services | All Rights Reserved  
+Designed & Developed by **Mohanlal**  
