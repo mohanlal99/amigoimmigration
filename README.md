@@ -1,6 +1,7 @@
 # Amigo Immigration Services 🌍
 
 Amigo Immigration Services is a professional consultancy platform designed to guide individuals seeking global opportunities in hospitality, internships, and study abroad programs.  
+
 This project is a **Next.js 14 application** built with modern tools like **NextUI**, **Framer Motion**, and **React**, ensuring smooth animations, responsiveness, and a premium user experience.  
 
 The platform showcases company offerings, provides details about study and job opportunities abroad, and allows applicants to apply online with data sent securely to email.
