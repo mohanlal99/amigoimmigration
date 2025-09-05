@@ -6,6 +6,9 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
   Navbar as NextUINavbar,
 } from "@nextui-org/navbar";
 import { usePathname } from "next/navigation";
@@ -78,92 +81,8 @@ const Navbar = () => {
 
       <NavbarContent justify="end">
         <ThemeSwitch />
-        <NavbarItem className="lg:hidden mt-1">
-          <div className="flex justify-center items-center py-4 ">
-            <Dropdown
-              className="w-full max-w-full shadow-none lg:hidden"
-              isOpen={navbarMenu}
-              radius="sm"
-              onOpenChange={setNavbarMenu}
-            >
-              <DropdownTrigger>
-                <Button
-                  isIconOnly
-                  aria-label={navbarMenu ? "Close menu" : "Open menu"}
-                  className="bg-transparent  transition-colors"
-                  size="sm"
-                  variant="light"
-                >
-                  {navbarMenu ? <X size={32} /> : <Menu size={32} />}
-                </Button>
-              </DropdownTrigger>
-
-              <DropdownMenu
-                aria-label="Main Navigation Menu"
-                className="w-full min-w-full "
-                onAction={() => setNavbarMenu(false)}
-              >
-                {menuData.map((menuItem) => (
-                  <DropdownItem
-                    key={menuItem.id}
-                    className="py-2"
-                    textValue={menuItem.title}
-                  >
-                    <Link
-                      className="flex items-center justify-between w-full text-foreground hover:text-primary transition-colors"
-                      href={menuItem.path}
-                    >
-                      {menuItem.title}
-                      {menuItem.submenu && <ChevronRight className="h-4 w-4" />}
-                    </Link>
-                    {menuItem.submenu && (
-                      <ul className="mt-2 space-y-1">
-                        {menuItem.submenu.map((submenuItem) => (
-                          <li key={submenuItem.id}>
-                            <Link
-                              className="block pl-4 py-1 text-sm text-foreground-500 hover:text-primary transition-colors"
-                              href={submenuItem.path}
-                            >
-                              {submenuItem.title}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </DropdownItem>
-                ))}
-              </DropdownMenu>
-              {menuData.map((menuItem) => (
-                <DropdownItem
-                  key={menuItem.id}
-                  className="py-2"
-                  textValue={menuItem.title}
-                >
-                  <Link
-                    className="flex items-center justify-between w-full text-foreground hover:text-primary transition-colors"
-                    href={menuItem.path}
-                  >
-                    {menuItem.title}
-                    {menuItem.submenu && <ChevronRight className="h-4 w-4" />}
-                  </Link>
-                  {menuItem.submenu && (
-                    <ul className="mt-2 space-y-1">
-                      {menuItem.submenu.map((submenuItem) => (
-                        <li key={submenuItem.id}>
-                          <Link
-                            className="block pl-4 py-1 text-sm text-foreground-500 hover:text-primary transition-colors"
-                            href={submenuItem.path}
-                          >
-                            {submenuItem.title}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </DropdownItem>
-              ))}
-            </Dropdown>
-          </div>
+        <NavbarItem className="lg:hidden">
+          <NavbarMenuToggle />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
           <Link href="/apply">
@@ -177,6 +96,38 @@ const Navbar = () => {
           </Link>
         </NavbarItem>
       </NavbarContent>
+      <NavbarMenu>
+        {menuData.map((menuItem) => (
+          <NavbarMenuItem key={menuItem.id}>
+            <div className="w-full">
+              {/* Main Menu Item */}
+              <Link
+                className="flex items-center justify-between w-full text-foreground hover:text-primary transition-colors"
+                href={menuItem.path}
+              >
+                {menuItem.title}
+                {menuItem.submenu && <ChevronRight className="h-4 w-4" />}
+              </Link>
+
+              {/* Submenu Dropdown */}
+              {menuItem.submenu && (
+                <ul className="pl-4 mt-2 space-y-1 border-l-2 border-primary">
+                  {menuItem.submenu.map((submenuItem) => (
+                    <li key={submenuItem.id}>
+                      <Link
+                        className="block py-1 text-sm text-foreground-500 hover:text-primary transition-colors"
+                        href={submenuItem.path}
+                      >
+                        {submenuItem.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </NextUINavbar>
   );
 };

@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 import { title } from "../primitives";
 
-import { SingleServicesCard } from "./SingleFeature";
-import CountryCard from "./countryCard";
-import { services } from "./featuresData";
+import { SingleServicesCard } from "../Services/SingleFeature";
+import CountryCard from "../Services/countryCard";
+import { services } from "../Services/featuresData";
 import LatestJobsPage from "./LatestJobs";
 
 const Services = () => {

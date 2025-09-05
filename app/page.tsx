@@ -7,8 +7,8 @@ import FandQ from "@/components/Home/faq";
 import Loan from "@/components/Home/loan";
 import PopularVisa from "@/components/Home/PopularVisa";
 import StartJourney from "@/components/Home/StartJourney";
-import Services from "@/components/Services";
 import { siteConfig } from "@/config/site";
+import Services from "@/components/Home/HomeServices";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.amigoimmigrant.com"),
